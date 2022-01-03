@@ -15,9 +15,10 @@ $(document).ready(function(){
     }
     else {
         // Default city
-        city = "London";
+        city = "Val-d'Or";
     }
     // Get and display current date
+    moment.locale('fr-ca');
     date = moment();
     for (var i = 0; i < 3; i++){
         // Display date
@@ -37,7 +38,7 @@ $(document).ready(function(){
         }
         else {
             meteoTitle = $('#meteo-title span');
-            meteoTitle.html('City <span class="text-muted">' + city + '</span> not found');
+            meteoTitle.html('Ville <span class="text-muted">' + city + '</span> introuvable');
         }
         // Stop loader
         setTimeout(function () {
@@ -60,7 +61,7 @@ $("#meteo-form").submit(function (event) {
         }
         else {
             meteoTitle = $('#meteo-title span');
-            meteoTitle.html('City <span class="text-muted">' + city + '</span> not found');
+            meteoTitle.html('Ville <span class="text-muted">' + city + '</span> introuvable');
         }
         // Stop loader
         setTimeout(function () {
@@ -86,7 +87,7 @@ $("#geolocation").click(function (event) {
             }
             else {
                 meteoTitle = $('#meteo-title span');
-                meteoTitle.html('Can\'t  get meteo for your position');
+                meteoTitle.html('Impossible de charger la météo pour votre emplacement');
             }
             // Stop loader
             setTimeout(function () {
@@ -140,7 +141,7 @@ function displaySunriseSunset(lat, long){
 function displayMeteo(data){
     // Update Google Map URL
     googleMapCity = "https://www.google.fr/maps/place/" + data.city.coord.lat + "," + data.city.coord.lon;
-    $('#meteo-title span').html('Weather in <a href="' + googleMapCity + '" class="text-muted meteo-city" target="_blank">' + data.city.name + ', ' + data.city.country + '</a>');
+    $('#meteo-title span').html('Météo à <a href="' + googleMapCity + '" class="text-muted meteo-city" target="_blank">' + data.city.name + ', ' + data.city.country + '</a>');
     // Update meteo for each day
     var tempMoyenne = 0;
     for (var i = 0; i < 3; i++){

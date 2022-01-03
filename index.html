@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-ca">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
     <script src="https://use.fontawesome.com/389802374e.js"></script>
-    <title>WeatherApp</title>
+    <title>Météo</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/img/icon.png" width="30" height="30" alt="">
-                <a class="navbar-brand" href="index.html">WeatherApp</a>
+                <a class="navbar-brand" href="index.html">Météo</a>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -29,21 +29,21 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/zMathieu/WeatherApp">About</a>
+                        <a class="nav-link" href="https://github.com/zMathieu/WeatherApp">À propos</a>
                     </li>
                 </ul>
                 <form id="meteo-form" class="form-inline my-2 my-lg-0">
                     <div id="search-loading" class="loading">
                         <div></div>
                     </div>
-                    <span id="geolocation" data-balloon="Geolocate me!" data-balloon-pos="down">
+                    <span id="geolocation" data-balloon="Localise-moi!" data-balloon-pos="down">
                         <i class="fa fa-crosshairs"></i>
                     </span>
-                    <input name="meteo-city" class="form-control mr-sm-2" placeholder="City" type="text">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    <input name="meteo-city" class="form-control mr-sm-2" placeholder="Ville" type="text">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
                 </form>
             </div>
         </nav>
@@ -52,12 +52,12 @@
     <div class="container">
         <h2 id="meteo-title">
             <span>
-                Weather in <a href="https://www.google.fr/maps/search/london" class="text-muted meteo-city" target="_blank">London</a>
+                Météo à <a href="https://www.google.fr/maps/search/val-d'or" class="text-muted meteo-city" target="_blank">Val-d'Or</a>
             </span>
         </h2>
         <section class="section-meteo row">
             <div id="meteo-day-1" class="meteo-day col-sm">
-                <h3><span class="name">Day 1</span> <span class="text-muted date">--/--</span></h3>
+                <h3><span class="name">Jour 1</span> <span class="text-muted date">--/--</span></h3>
                 <div class="meteo-block row meteo-temperature-container">
                     <div class="meteo-temperature">
                         <i class="wi wi-night-sleet"></i>
@@ -68,14 +68,14 @@
                     <div class="col meteo-block meteo-humidity">
                         <div class="meteo-block-title">
                             <i class="fa fa-tint" aria-hidden="true"></i>
-                             Humidity
+                             Humidité
                         </div>
                         <div class="meteo-block-data">--%</div>
                     </div>
                     <div class="col meteo-block meteo-wind">
                         <div class="meteo-block-title">
                             <i class="fa fa-flag" aria-hidden="true"></i>
-                            Wind
+                            Vent
                         </div>
                         <div class="meteo-block-data">-- km/h</div>
                     </div>
@@ -84,21 +84,21 @@
                     <div class="col meteo-block meteo-sunrise">
                         <div class="meteo-block-title">
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            Sunrise
+                            Lever
                         </div>
                         <div class="meteo-block-data">--:--</div>
                     </div>
                     <div class="col meteo-block meteo-sunset">
                         <div class="meteo-block-title">                      
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            Sunset
+                            Coucher
                         </div>
                         <div class="meteo-block-data">--:--</div>
                     </div>
                 </div>
             </div>
             <div id="meteo-day-2" class="meteo-day col-sm">
-                <h3><span class="name">Day 2</span> <span class="text-muted date">--/--</span></h3>
+                <h3><span class="name">Jour 2</span> <span class="text-muted date">--/--</span></h3>
                 <div class="meteo-block row meteo-temperature-container">
                     <div class="meteo-temperature">
                         <i class="wi wi-night-sleet"></i>
@@ -109,14 +109,14 @@
                     <div class="col meteo-block meteo-humidity">
                         <div class="meteo-block-title">
                             <i class="fa fa-tint" aria-hidden="true"></i>
-                             Humidity
+                             Humidité
                         </div>
                         <div class="meteo-block-data">--%</div>
                     </div>
                     <div class="col meteo-block meteo-wind">
                         <div class="meteo-block-title">
                             <i class="fa fa-flag" aria-hidden="true"></i>
-                            Wind
+                            Vent
                         </div>
                         <div class="meteo-block-data">-- km/h</div>
                     </div>
@@ -125,21 +125,21 @@
                     <div class="col meteo-block meteo-sunrise">
                         <div class="meteo-block-title">
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            Sunrise
+                            Lever
                         </div>
                         <div class="meteo-block-data">--:--</div>
                     </div>
                     <div class="col meteo-block meteo-sunset">
                         <div class="meteo-block-title">                      
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            Sunset
+                            Coucher
                         </div>
                         <div class="meteo-block-data">--:--</div>
                     </div>
                 </div>
             </div>
             <div id="meteo-day-3" class="meteo-day col-sm">
-                <h3><span class="name">Day 3</span> <span class="text-muted date">--/--</span></h3>
+                <h3><span class="name">Jour 3</span> <span class="text-muted date">--/--</span></h3>
                 <div class="meteo-block row meteo-temperature-container">
                     <div class="meteo-temperature">
                         <i class="wi wi-night-sleet"></i>
@@ -150,14 +150,14 @@
                     <div class="col meteo-block meteo-humidity">
                         <div class="meteo-block-title">
                             <i class="fa fa-tint" aria-hidden="true"></i>
-                             Humidity
+                             Humidité
                         </div>
                         <div class="meteo-block-data">--%</div>
                     </div>
                     <div class="col meteo-block meteo-wind">
                         <div class="meteo-block-title">
                             <i class="fa fa-flag" aria-hidden="true"></i>
-                            Wind
+                            Vent
                         </div>
                         <div class="meteo-block-data">-- km/h</div>
                     </div>
@@ -166,14 +166,14 @@
                     <div class="col meteo-block meteo-sunrise">
                         <div class="meteo-block-title">
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            Sunrise
+                            Lever
                         </div>
                         <div class="meteo-block-data">--:--</div>
                     </div>
                     <div class="col meteo-block meteo-sunset">
                         <div class="meteo-block-title">                      
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
-                            Sunset
+                            Coucher
                         </div>
                         <div class="meteo-block-data">--:--</div>
                     </div>
@@ -185,21 +185,21 @@
     <footer>
         <ul>
             <li>
-                <a href="index.html">Home</a>
+                <a href="index.html">Accueil</a>
             </li>
             <li>
-                <a href="https://github.com/zMathieu/WeatherApp">About</a>
+                <a href="https://github.com/zMathieu/WeatherApp">À propos</a>
             </li>
             <li>
-                <a href="#">Privacy</a>
+                <a href="#">Vie privée</a>
             </li>
             <li>
-                <a href="#">Terms</a>
+                <a href="#">Termes</a>
             </li>
         </ul>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.min.js"></script>
     <script src="assets/js/utility.js"></script>
     <script src="assets/js/app.js"></script>
